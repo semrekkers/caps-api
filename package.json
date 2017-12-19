@@ -1,0 +1,8 @@
+{
+  "name": "caps-api",
+  "version": "1.0.0",
+  "description": "API for CapsClothing",
+  "main": "index.js",
+  "repository": "git@github.com:Jensderond/caps-api.git",
+  "author": "Caps Clothing United"
+}
