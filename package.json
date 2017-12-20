@@ -4,9 +4,10 @@
   "description": "API for CapsClothing",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "repository": "git@github.com:Jensderond/caps-api.git",
+  "repository": "git@github.com:devments/caps-api.git",
   "author": "Caps Clothing United",
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -29,5 +30,8 @@
     "passport-http": "^0.3.0",
     "passport-http-bearer": "^1.0.1",
     "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.13.3"
   }
 }
