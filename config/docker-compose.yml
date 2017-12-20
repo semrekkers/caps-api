@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  api:
+    depends_on:
+      - db
+    image: semrekkers/caps-api:latest
+    environment:
+      MONGO_URI: mongodb://db:27017/caps
+      TLS: <YOUR_EMAIL>
+      HOSTNAME: <YOUR_HOSTNAME>

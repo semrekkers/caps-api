@@ -1,0 +1,8 @@
+{$HOSTNAME}
+
+tls {$TLS}
+
+proxy /api localhost:3000
+
+ext .html
+gzip
