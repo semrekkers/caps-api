@@ -4,10 +4,13 @@ set -e
 
 PORT=${PORT:=80}
 TLS=${TLS:=off}
+NODE_ENV=${NODE_ENV:=production}
 
 # Wait for mongo
-sleep 10
+sleep 5
 
+# Start API server
 node index.js &
 
-caddy -conf config/Caddyfile -root frontend/dist
+# Start HTTP server
+caddy -conf config/Caddyfile -root dist
