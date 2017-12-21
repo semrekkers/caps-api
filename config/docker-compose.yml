@@ -5,6 +5,8 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
+    volumes:
+      - "dbdata:/data/db"
 
   api:
     depends_on:
@@ -13,8 +15,14 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - "userdata:/data/caps"
     environment:
       MONGO_URI: mongodb://db:27017/caps
       TLS: <YOUR_EMAIL>
       HOSTNAME: <YOUR_HOSTNAME>
       JWT_SECRET: <YOUR_SECRET>
+
+volumes:
+  dbdata:
+  userdata:
