@@ -6,7 +6,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - "dbdata:/data/db"
+      - "/data/caps/db:/data/db"
 
   api:
     depends_on:
@@ -16,13 +16,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - "userdata:/data/caps"
+      - "/data/caps/userdata:/data/caps"
+      - "<YOUR_CADDY_FOLDER>:/root/.caddy" # Example: "/data/secrets/caps:/root/.caddy"
     environment:
       MONGO_URI: mongodb://db:27017/caps
       TLS: <YOUR_EMAIL>
       HOSTNAME: <YOUR_HOSTNAME>
       JWT_SECRET: <YOUR_SECRET>
-
-volumes:
-  dbdata:
-  userdata:
