@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    title Betalings wijziging
+  body
+    h1 De betaal status van u order is gewijzigd
+    p.
+      Order id: #{orderId}
+    if status
+      h2 Betaling gelukt!
+    else
+      h2 Betaling is mislukt!
+    p.
+      Kijk op onze site om je bestelling status te bekijken.
