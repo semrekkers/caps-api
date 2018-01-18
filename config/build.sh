@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -e
+set -x
 
 # Clone frontend
 git clone --depth 1 https://github.com/devments/caps-angular.git frontend
