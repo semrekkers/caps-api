@@ -6,5 +6,9 @@ html(lang="en")
     h1 De betaal status van u order is gewijzigd
     p.
       Order id: #{orderId}
+    if status
+      h2 Betaling gelukt!
+    else
+      h2 Betaling is mislukt!
     p.
       Kijk op onze site om je bestelling status te bekijken.
