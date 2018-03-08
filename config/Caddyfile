@@ -11,4 +11,4 @@ rewrite {
 
 ext .html
 gzip
-log
+log /var/log/http.log
